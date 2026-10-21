@@ -13,7 +13,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <main className="bg-[#050505] min-h-screen text-white relative cursor-none selection:bg-red-600 selection:text-white">
+    <main className="portfolio-backdrop min-h-screen text-cream relative cursor-none selection:bg-brown-600 selection:text-cream">
       {/* Cinematic Preloader */}
       {loading && <NetflixPreloader onComplete={() => setLoading(false)} />}
 

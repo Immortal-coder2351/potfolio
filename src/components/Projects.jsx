@@ -4,394 +4,335 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Authentic Project Data based on your engineering portfolio
-const projectsData = [
+const projects = [
   {
-    title: "StudyMate",
-    category: "Artificial Intelligence",
-    description: "An AI-powered Q&A system enabling students to upload PDFs, perform semantic search, and receive grounded answers.",
-    tags: ["Python", "Streamlit", "LLM", "Semantic Search"],
-    match: "99%",
-    episode: "S01 E09",
-    liveUrl: "https://github.com/azmeeratharun/team114" // Add your live website or GitHub link here
-
+    title: 'Smart Public Grievance Escalation System',
+    category: 'Civic Technology',
+    description: 'A Java and MySQL grievance platform for complaint tracking, image uploads, and automatic escalation across officer levels.',
+    tags: ['Java', 'MySQL', 'Grievance Management'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/Smart_Public_Grievance_Escalation_System',
+    liveUrl: 'https://smart-public-grievance-escalation-system.onrender.com'
   },
   {
-    title: "AI Voice Assistant",
-    category: "Python Automation",
-    description: "A desktop voice assistant built in Python using speech recognition and text-to-speech engines to handle voice commands, web searches, and local system tasks.",
-    tags: ["Python", "Speech Recognition", "pyttsx3", "Automation"],
-    match: "98%",
-    episode: "S01 E10",
-    liveUrl: "https://github.com/azmeeratharun/AI-VOICE-ASSISTANT"
-
-
+    title: 'Immortal-coder2351.github.io',
+    category: 'Portfolio Website',
+    description: 'Personal portfolio website repository.',
+    tags: ['Portfolio', 'GitHub Pages'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/Immortal-coder2351.github.io'
   },
   {
-    title: "Blockchain-Based Mobile Voting System",
-    category: "Full-Stack & Web3 Architecture",
-    description: "A secure, mobile-friendly voting platform featuring Aadhaar/PAN verification, eKYC authentication, live face recognition, and blockchain-backed immutable vote storage.",
-    tags: ["React.js", "Node.js", "Express", "MongoDB", "Blockchain", "Tailwind CSS"],
-    match: "98%",
-    episode: "S01 E11",
-    liveUrl: "https://secure-voting-chain.preview.emergentagent.com/" // Add your live deployment or GitHub link here
-
+    title: 'vote',
+    category: 'GitHub Repository',
+    description: 'Explore the source code and project details in this repository.',
+    tags: ['GitHub'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/vote'
   },
   {
-    title: "Productivity Suite Extension",
-    category: "Client-Side Engineering",
-    description: "Custom Chrome extension built with Chrome APIs and advanced JavaScript for task automation and management.",
-    tags: ["JavaScript", "Chrome APIs", "Tailwind CSS", "HTML5"],
-    match: "99%",
-    episode: "S01 E04",
-    liveUrl: "https://github.com/azmeeratharun"
+    title: 'notes',
+    category: 'GitHub Repository',
+    description: 'Explore the source code and project details in this repository.',
+    tags: ['GitHub'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/notes'
   },
   {
-    title: "AI & ML Diagnostic Engine",
-    category: "Artificial Intelligence",
-    description: "Intelligent data processing pipeline leveraging machine learning models and NLP workflows.",
-    tags: ["Python", "Machine Learning", "NLP", "AWS"],
-    match: "96%",
-    episode: "S01 E05",
-    liveUrl: "https://github.com/azmeeratharun"
+    title: 'PULSE_PICK_AI',
+    category: 'Artificial Intelligence',
+    description: 'Explore the source code and project details in this repository.',
+    tags: ['AI', 'GitHub'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/PULSE_PICK_AI'
   },
   {
-    title: "Algorithmic Problem Solver",
-    category: "Competitive Programming",
-    description: "Optimized data structure solutions across LeetCode, CodeChef, and GeeksforGeeks platforms.",
-    tags: ["Data Structures", "Algorithms", "C++", "JavaScript"],
-    match: "99%",
-    episode: "S01 E06",
-    liveUrl: "https://github.com/azmeeratharun"
+    title: 'ARGO_SCHEME_RECOMENDER',
+    category: 'GitHub Repository',
+    description: 'Explore the source code and project details in this repository.',
+    tags: ['GitHub'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/ARGO_SCHEME_RECOMENDER'
   },
   {
-    title: "Portfolio Cinematics v2.6",
-    category: "UI/UX & Animation",
-    description: "Award-winning dark studio interactive portfolio featuring GSAP physics and responsive layouts.",
-    tags: ["React", "GSAP", "Tailwind CSS", "Framer Motion"],
-    match: "100%",
-    episode: "S01 E07",
-    liveUrl: "https://github.com/azmeeratharun"
+    title: 'mind-sprouts',
+    category: 'GitHub Repository',
+    description: 'Explore the source code and project details in this repository.',
+    tags: ['GitHub'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/mind-sprouts'
   },
   {
-    title: "Cloud CI/CD Pipeline",
-    category: "DevOps & Infrastructure",
-    description: "Automated deployment workflows using GitHub Actions and containerized Docker environments.",
-    tags: ["Docker", "GitHub Actions", "CI/CD", "Render"],
-    match: "98%",
-    episode: "S01 E08",
-    liveUrl: "https://github.com/azmeeratharun"
+    title: 'AI-Based Career Recommendation System',
+    category: 'Artificial Intelligence',
+    description: 'A Streamlit app that recommends career paths from a user’s education, skills, interests, and profile score using a trained LightGBM model.',
+    tags: ['Python', 'Streamlit', 'LightGBM'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/AI-Based-Carrier-Recommendation-System'
+  },
+  {
+    title: 'chatbot-002',
+    category: 'GitHub Repository',
+    description: 'Explore the source code and project details in this repository.',
+    tags: ['GitHub'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/chatbot-002'
+  },
+  {
+    title: 'PASSWORD-GENERATOR',
+    category: 'GitHub Repository',
+    description: 'Explore the source code and project details in this repository.',
+    tags: ['GitHub'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/PASSWORD-GENERATOR'
+  },
+  {
+    title: 'BMI-CALCULATOR',
+    category: 'GitHub Repository',
+    description: 'Explore the source code and project details in this repository.',
+    tags: ['GitHub'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/BMI-CALCULATOR'
+  },
+  {
+    title: 'AI-ASSISSTANT',
+    category: 'GitHub Repository',
+    description: 'Explore the source code and project details in this repository.',
+    tags: ['GitHub'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/AI-ASSISSTANT'
+  },
+  {
+    title: 'studymate',
+    category: 'GitHub Repository',
+    description: 'Explore the source code and project details in this repository.',
+    tags: ['GitHub'],
+    repositoryUrl: 'https://github.com/Immortal-coder2351/studymate'
   }
 ];
 
+const ProjectCard = ({ project, index, cardRef, compact = false }) => (
+  <article
+    ref={cardRef}
+    className={`group flex flex-col rounded-2xl border border-cream/15 bg-[#493023]/95 shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition duration-300 hover:border-brown-400/60 hover:bg-[#493023] ${
+      compact
+        ? 'min-h-[280px] p-6'
+        : 'absolute left-1/2 top-1/2 h-[190px] w-[min(36vw,190px)] -translate-x-1/2 -translate-y-1/2 p-4'
+    }`}
+  >
+    <div className="mb-3 flex items-start justify-between gap-2">
+      <span className="rounded border border-brown-500/30 bg-brown-600/10 px-2 py-1 font-mono text-[9px] font-bold uppercase tracking-widest text-brown-300">
+        {project.category}
+      </span>
+      <span className="shrink-0 font-mono text-[10px] text-cream/45">
+        {String(index + 1).padStart(2, '0')} / {projects.length}
+      </span>
+    </div>
+
+    <h3 className={`mb-2 font-bold leading-snug text-cream transition-colors group-hover:text-brown-200 ${compact ? 'text-lg' : 'line-clamp-4 text-base'}`}>
+      {project.title}
+    </h3>
+    {compact && (
+      <p className="mb-3 line-clamp-3 text-xs leading-relaxed text-cream/70">
+        {project.description}
+      </p>
+    )}
+
+    {compact && (
+      <div className="mb-3 flex flex-wrap gap-1.5">
+        {project.tags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded border border-cream/10 bg-cream/[0.04] px-2 py-1 font-mono text-[9px] text-cream/70"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <div className="mt-auto flex flex-wrap items-center gap-2 border-t border-cream/10 pt-3">
+      {project.liveUrl && (
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noreferrer"
+          className={`inline-flex min-h-9 items-center rounded bg-brown-600 py-1.5 font-bold uppercase tracking-wider text-cream transition-colors hover:bg-brown-500 ${compact ? 'px-3 text-[10px]' : 'px-2 text-[9px]'}`}
+        >
+          Live Demo
+        </a>
+      )}
+      <a
+        href={project.repositoryUrl}
+        target="_blank"
+        rel="noreferrer"
+        className={`inline-flex min-h-9 items-center rounded border border-cream/25 py-1.5 font-bold uppercase tracking-wider text-cream/80 transition-colors hover:border-cream/60 hover:text-cream ${compact ? 'px-3 text-[10px]' : 'px-2 text-[9px]'}`}
+      >
+        GitHub
+      </a>
+    </div>
+  </article>
+);
+
 const Projects = () => {
-  const containerRef = useRef(null);
-  const folderBackRef = useRef(null);
-  const folderFrontRef = useRef(null);
+  const sectionRef = useRef(null);
+  const wheelRef = useRef(null);
+  const envelopeFlapRef = useRef(null);
   const cardsRef = useRef([]);
-  const mobileCardsRef = useRef([]);
-  const mobileCarouselRef = useRef(null);
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
-      // Set initial origins (Centered in viewport)
-      gsap.set([folderBackRef.current, folderFrontRef.current], {
-        xPercent: -50,
-        yPercent: -50
-      });
-      gsap.set(folderFrontRef.current, { transformOrigin: "bottom center" });
+    const section = sectionRef.current;
+    const wheel = wheelRef.current;
+    const flap = envelopeFlapRef.current;
+    const cards = cardsRef.current.filter(Boolean);
+    if (!section || !wheel || !flap || !cards.length) return undefined;
 
-      const getGridPos = (index) => {
-        let row, col;
-        if (index < 3) { row = 0; col = index; }
-        else if (index === 3) { row = 1; col = 0; }
-        else if (index === 4) { row = 1; col = 2; }
-        else { row = 2; col = index - 5; }
-        return { row, col };
-      };
+    const context = gsap.context(() => {
+      const media = gsap.matchMedia();
 
-      cardsRef.current.forEach((card) => {
-        gsap.set(card, {
+      media.add('(min-width: 1280px)', () => {
+        const radius = Math.min((window.innerWidth - 160) / 2, 560);
+        const angleStep = (Math.PI * 2) / cards.length;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let orbit;
+
+        gsap.set(flap, { transformOrigin: 'center bottom', rotationX: 0 });
+        gsap.set(cards, {
           xPercent: -50,
           yPercent: -50,
-          rotation: gsap.utils.random(-6, 6),
-          scale: 0.85,
           x: 0,
-          y: 0,
+          y: 100,
+          scale: 0.18,
+          opacity: 0,
+          rotation: 0
+        });
+
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 60%',
+            toggleActions: 'play none none reverse',
+            onLeaveBack: () => {
+              if (orbit) orbit.kill();
+              gsap.set(wheel, { rotation: 0 });
+              gsap.set(cards, { rotation: 0 });
+            }
+          },
+        });
+
+        timeline
+          .to(flap, { rotationX: -155, duration: 0.75, ease: 'power3.inOut' })
+          .to(cards, {
+            x: (index) => Math.sin(index * angleStep) * radius,
+            y: (index) => Math.cos(index * angleStep) * radius,
+            scale: 1,
+            opacity: 1,
+            duration: 1.1,
+            stagger: { amount: 0.7, from: 'center' },
+              ease: 'power3.out',
+              onComplete: () => {
+                if (reduceMotion) return;
+                orbit = gsap.to(wheel, {
+                  rotation: 360,
+                  duration: 72,
+                  repeat: -1,
+                  ease: 'none',
+                  onUpdate: () => {
+                    gsap.set(cards, { rotation: -gsap.getProperty(wheel, 'rotation') });
+                  }
+                });
+              }
+          }, '-=0.15');
+
+        if (reduceMotion) {
+          gsap.set(flap, { rotationX: -155 });
+          gsap.set(cards, {
+              x: (index) => Math.sin(index * angleStep) * radius,
+              y: (index) => Math.cos(index * angleStep) * radius,
+              scale: 1,
+              opacity: 1
+          });
+          timeline.progress(1).pause();
+        }
+      });
+
+      media.add('(max-width: 1279px)', () => {
+        gsap.set(flap, { transformOrigin: 'center bottom', rotationX: 0 });
+        gsap.set(cards, { clearProps: 'all' });
+        gsap.from(cards, {
+          y: 24,
+          opacity: 0,
+          duration: 0.45,
+          stagger: 0.06,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 75%'
+          }
         });
       });
 
-      let mm = gsap.matchMedia();
+      return () => media.revert();
+    }, section);
 
-      mm.add({
-        isDesktop: "(min-width: 768px)",
-        isMobile: "(max-width: 767px)"
-      }, (context) => {
-        let { isDesktop, isMobile } = context.conditions;
-
-        if (isDesktop) {
-          let floatTween;
-
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: containerRef.current,
-              start: "top 50%",
-              end: "bottom 50%",
-              toggleActions: "play reverse play reverse",
-              onEnter: () => { if (floatTween) floatTween.kill(); },
-              onEnterBack: () => { if (floatTween) floatTween.kill(); },
-              onLeave: () => { if (floatTween) floatTween.kill(); },
-              onLeaveBack: () => { if (floatTween) floatTween.kill(); }
-            },
-            onComplete: () => {
-              floatTween = gsap.to(cardsRef.current, {
-                y: "+=12",
-                rotation: "+=1",
-                duration: 3.5,
-                yoyo: true,
-                repeat: -1,
-                ease: "sine.inOut",
-                stagger: { amount: 1.5, from: "random" }
-              });
-            }
-          });
-
-          // 1. Folder opens with smooth rotation
-          tl.to(folderFrontRef.current, {
-            rotationX: -130,
-            duration: 1.2,
-            ease: "power3.inOut"
-          });
-
-          // 2. Cards rise up collectively
-          tl.to(cardsRef.current, {
-            y: -140,
-            scale: 0.9,
-            zIndex: 70,
-            duration: 0.6,
-            stagger: 0.04,
-            ease: "back.out(1.2)"
-          }, "-=0.6");
-
-          // 3. Cards magically spread out into an ultra-clean blockbuster grid layout
-          tl.to(cardsRef.current, {
-            x: (i) => {
-              const w = Math.max(...cardsRef.current.map(c => c?.offsetWidth || 0)) || 360;
-              const gap = 40;
-              const { col } = getGridPos(i);
-              return (col - 1) * (w + gap);
-            },
-            y: (i) => {
-              const h = Math.max(...cardsRef.current.map(c => c?.offsetHeight || 0)) || 240;
-              const gap = 40;
-              const { row } = getGridPos(i);
-              return (row - 1) * (h + gap);
-            },
-            rotation: () => gsap.utils.random(-3, 3),
-            scale: 1,
-            duration: 1.4,
-            stagger: { amount: 0.4, from: "center" },
-            ease: "expo.out"
-          }, "-=0.2");
-        }
-
-        if (isMobile) {
-          const cardW = window.innerWidth * 0.8;
-          const gap = 20;
-
-          mobileCardsRef.current.forEach((card, i) => {
-            gsap.set(card, {
-              x: -(i * (cardW + gap)),
-              y: 0,
-              scale: 0.4,
-              opacity: 0,
-              rotation: gsap.utils.random(-15, 15)
-            });
-          });
-
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: containerRef.current,
-              start: "top 60%",
-            }
-          });
-
-          tl.to(folderFrontRef.current, {
-            rotationX: -130,
-            duration: 0.8,
-            ease: "power3.inOut"
-          });
-
-          tl.to(mobileCardsRef.current, {
-            y: -100,
-            opacity: 1,
-            scale: 0.85,
-            duration: 0.6,
-            stagger: 0.05,
-            ease: "back.out(1.2)"
-          }, "-=0.4");
-
-          tl.to(mobileCardsRef.current, {
-            x: 0,
-            y: 0,
-            rotation: 0,
-            scale: (i) => i === 0 ? 1 : 0.92,
-            opacity: (i) => i === 0 ? 1 : 0.5,
-            duration: 0.8,
-            stagger: 0.08,
-            ease: "expo.out",
-            onComplete: () => {
-              if (mobileCarouselRef.current) {
-                mobileCarouselRef.current.style.overflowX = 'auto';
-                mobileCarouselRef.current.style.pointerEvents = 'auto';
-              }
-            }
-          }, "-=0.2");
-        }
-      });
-    }, containerRef);
-
-    return () => ctx.revert();
+    return () => context.revert();
   }, []);
 
   return (
-    <section id="projects" ref={containerRef} className="bg-[#0b0b0b] min-h-[100svh] md:min-h-[170vh] relative font-sans overflow-x-clip text-white w-full flex items-center justify-center py-24 md:py-40 select-none">
-
-      {/* Background Netflix Cinematic Title Watermark */}
-      <div className="absolute top-10 left-0 w-full flex items-start justify-center pointer-events-none z-0">
-        <h1 className="text-[14vw] sm:text-[17vw] md:text-[20vw] font-black text-white/[0.03] tracking-tighter leading-none whitespace-nowrap uppercase">
-          ORIGINALS
-        </h1>
+    <section
+      id="projects"
+      ref={sectionRef}
+      className="portfolio-backdrop-alt relative min-h-[100svh] overflow-hidden px-6 py-24 text-cream md:min-h-[1450px] md:px-12 md:py-32 xl:min-h-[1750px]"
+    >
+      <div className="pointer-events-none absolute inset-x-0 top-12 overflow-hidden text-center">
+        <span className="whitespace-nowrap text-[16vw] font-black uppercase leading-none tracking-tighter text-cream/[0.03]">
+          ARCHIVE
+        </span>
       </div>
 
-      {/* Ambient Crimson Glow behind folder */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55vw] h-[55vw] bg-red-600/15 rounded-full blur-[160px] pointer-events-none z-0" />
+      <div className="relative z-10 mx-auto w-full max-w-7xl">
+        <header className="relative z-20 mb-10 flex flex-col gap-3 border-b border-cream/15 pb-6 sm:flex-row sm:items-end sm:justify-between md:mb-0">
+          <div>
+            <p className="mb-2 font-mono text-xs font-bold uppercase tracking-[0.2em] text-brown-400">
+              Project Archive
+            </p>
+            <h2 className="text-3xl font-black tracking-tight text-cream md:text-5xl">
+              Archive Slots
+            </h2>
+          </div>
+          <p className="font-mono text-xs uppercase tracking-widest text-cream/55">
+            {projects.length} public repositories
+          </p>
+        </header>
 
-      {/* Main Perspective Container */}
-      <div className="mt-12 relative w-full max-w-7xl h-full flex items-center justify-center perspective-[2000px] z-10">
+        <div className="relative z-10 mx-auto hidden h-[1360px] w-full items-center justify-center xl:flex">
+          <div className="absolute left-1/2 top-1/2 z-0 aspect-square w-[min(88vw,1120px)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-brown-400/30" />
 
-        {/* Origin Container */}
-        <div className="relative w-0 h-0 transform-style-3d">
-
-          {/* Folder Back */}
           <div
-            ref={folderBackRef}
-            className="absolute w-[85vw] md:w-[32vw] max-w-[380px] aspect-video bg-[#141414] rounded-[24px] border border-red-600/40 shadow-[0_20px_50px_rgba(229,9,20,0.25)] flex items-center justify-center"
-            style={{ zIndex: 5 }}
+            ref={wheelRef}
+            className="absolute left-1/2 top-1/2 z-20 h-0 w-0"
           >
-            <div className="absolute -top-6 left-6 w-32 h-8 bg-[#1f1f1f] rounded-t-xl border-t border-red-600/30" />
-            <div className="relative z-10 text-red-600 font-mono font-black text-2xl tracking-widest uppercase opacity-60">
-              ARCHIVE_SLOTS
-            </div>
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={project.repositoryUrl}
+                project={project}
+                index={index}
+                cardRef={(element) => { cardsRef.current[index] = element; }}
+              />
+            ))}
           </div>
 
-          {/* Desktop Project Cards */}
-          {projectsData.map((project, i) => (
-            <a
-              key={i}
-              href={project.liveUrl}
-              target="_blank"
-              rel="noreferrer"
-              ref={el => cardsRef.current[i] = el}
-              className="hidden md:block absolute w-[80vw] md:w-[33vw] max-w-[380px] aspect-[16/10] will-change-transform"
-              style={{ zIndex: 10 + i }}
-            >
-              <div className="w-full h-full rounded-[24px] overflow-hidden border border-white/15 bg-[#141414]/95 backdrop-blur-2xl shadow-[0_25px_50px_rgba(0,0,0,0.9)] transition-all duration-500 group hover:scale-[1.04] hover:border-red-600 hover:shadow-[0_35px_80px_rgba(229,9,20,0.35)] hover:-translate-y-2 cursor-pointer relative z-10 p-7 flex flex-col justify-between">
+          <div className="absolute left-1/2 top-1/2 z-10 h-[180px] w-[300px] -translate-x-1/2 -translate-y-1/2">
+            <div className="absolute inset-0 rounded-b-[28px] rounded-t-lg border border-brown-300/30 bg-gradient-to-b from-[#62402E] to-[#302118] shadow-[0_25px_55px_rgba(0,0,0,0.55)]" />
+            <div
+              ref={envelopeFlapRef}
+              className="absolute inset-x-0 top-0 h-[85px] origin-bottom rounded-t-lg border border-brown-300/30 bg-[#795038] [clip-path:polygon(0_0,100%_0,50%_100%)]"
+            />
+            <div className="absolute inset-x-0 bottom-5 z-20 text-center font-mono text-xs font-bold tracking-[0.2em] text-cream/70">
+              OPEN ARCHIVE
+            </div>
+          </div>
+        </div>
 
-                {/* Top Card Header */}
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-red-500 bg-red-600/10 px-2.5 py-1 rounded border border-red-600/20">
-                    {project.episode}
-                  </span>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-mono text-red-400 font-bold">{project.match} Match</span>
-                    <span className="text-[10px] font-mono border border-white/30 px-1 text-white/70">HD</span>
-                  </div>
-                </div>
-
-                {/* Middle Title & Description */}
-                <div className="space-y-2 my-auto">
-                  <div className="text-[11px] font-mono uppercase tracking-widest text-white/40">
-                    {project.category}
-                  </div>
-                  <h3 className="text-2xl font-black text-white tracking-tight group-hover:text-red-500 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-xs text-white/70 font-light leading-relaxed line-clamp-2">
-                    {project.description}
-                  </p>
-                </div>
-
-                {/* Bottom Tech Tags */}
-                <div className="flex flex-wrap gap-1.5 pt-3 border-t border-white/10">
-                  {project.tags.map((tag, tIdx) => (
-                    <span key={tIdx} className="text-[10px] font-mono text-white/70 bg-white/5 px-2 py-0.5 rounded group-hover:border-red-600/30 transition-colors">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Red Glowing Corner Accent */}
-                <div className="absolute bottom-4 right-4 w-2 h-2 rounded-full bg-red-600 group-hover:shadow-[0_0_15px_#E50914] transition-all" />
-              </div>
-            </a>
+        <div className="relative z-10 grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:hidden">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={project.repositoryUrl}
+              project={project}
+              index={index}
+              compact
+            />
           ))}
-
-          {/* Folder Front Flap */}
-          <div
-            ref={folderFrontRef}
-            className="absolute w-[85vw] md:w-[32vw] max-w-[380px] aspect-video pointer-events-none will-change-transform"
-            style={{ zIndex: 60 }}
-          >
-            <div className="absolute bottom-0 w-full h-[85%] bg-[#1c1c1c] rounded-b-[24px] rounded-t-md shadow-[0_-5px_20px_rgba(0,0,0,0.8)] flex flex-col justify-end p-6 border-t border-red-600/40">
-              <div className="w-20 h-1.5 bg-white/20 rounded-full mx-auto mb-2" />
-            </div>
-          </div>
-
         </div>
       </div>
-
-      {/* Mobile Swipeable Carousel */}
-      <div
-        ref={mobileCarouselRef}
-        className="md:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-auto py-12 flex items-center gap-6 px-[12.5vw] pointer-events-none z-[100] snap-x snap-mandatory overflow-x-hidden hide-scrollbar"
-      >
-        <style>{`
-          .hide-scrollbar::-webkit-scrollbar { display: none; }
-          .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        `}</style>
-        {projectsData.map((project, i) => (
-          <a
-            key={`mob-${i}`}
-            href={project.liveUrl}
-            target="_blank"
-            rel="noreferrer"
-            ref={el => mobileCardsRef.current[i] = el}
-            className="shrink-0 w-[78vw] aspect-[16/11] snap-center will-change-transform relative z-10"
-          >
-            <div className="w-full h-full rounded-[24px] overflow-hidden border border-white/15 bg-[#141414] p-6 flex flex-col justify-between shadow-[0_20px_40px_rgba(0,0,0,0.9)]">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-mono font-bold tracking-widest text-red-500 bg-red-600/10 px-2 py-0.5 rounded">
-                  {project.episode}
-                </span>
-                <span className="text-xs font-mono text-red-400 font-bold">{project.match} Match</span>
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-xl font-black text-white">{project.title}</h3>
-                <p className="text-xs text-white/70 font-light line-clamp-2">{project.description}</p>
-              </div>
-              <div className="flex flex-wrap gap-1 pt-2 border-t border-white/10">
-                {project.tags.slice(0, 3).map((tag, tIdx) => (
-                  <span key={tIdx} className="text-[10px] font-mono text-white/60 bg-white/5 px-2 py-0.5 rounded">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
-
     </section>
   );
 };

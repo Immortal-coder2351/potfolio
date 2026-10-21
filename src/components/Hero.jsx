@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import pictureImg from '../assets/Portfolio/picture.png';
+import pictureImg from '../assets/Portfolio/profile-full.webp';
+import { siteData } from '../data/siteData';
 
 const Hero = () => {
   const sectionRef = useRef(null);
@@ -134,7 +135,7 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-screen bg-[#050505] overflow-hidden flex flex-col justify-between select-none cursor-none"
+      className="portfolio-backdrop relative w-full h-screen overflow-hidden flex flex-col justify-between select-none cursor-none"
     >
       <style>{`
         @keyframes marquee {
@@ -149,11 +150,11 @@ const Hero = () => {
       `}</style>
 
       {/* 1. Cinematic Background Gradient & Marquee */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/90 to-[#050505] z-0">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-[#1A100B]/30 to-black/55 z-0">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden opacity-10">
           <div className="flex whitespace-nowrap animate-marquee">
             {[...developerRoles, ...developerRoles].map((role, idx) => (
-              <span key={idx} className="text-[14vw] font-black text-red-600 mx-8 uppercase tracking-tighter">
+              <span key={idx} className="text-[14vw] font-black text-brown-600 mx-8 uppercase tracking-tighter">
                 {role} &bull;
               </span>
             ))}
@@ -166,7 +167,7 @@ const Hero = () => {
         ref={spotlightRef}
         className="absolute top-0 left-0 w-[600px] h-[600px] rounded-full pointer-events-none z-10 opacity-0 blur-[90px] transition-opacity duration-300"
         style={{
-          background: 'radial-gradient(circle, rgba(229,9,20,0.35) 0%, rgba(229,9,20,0.1) 40%, transparent 70%)'
+          background: 'radial-gradient(circle, rgba(166,122,88,0.35) 0%, rgba(166,122,88,0.1) 40%, transparent 70%)'
         }}
       ></div>
 
@@ -175,15 +176,15 @@ const Hero = () => {
         
         {/* Top Netflix Cinematic Badge */}
         <div className="hero-anim-item flex items-center justify-between w-full">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded bg-black/80 backdrop-blur-2xl border border-red-600/40 text-xs font-mono uppercase tracking-widest text-white shadow-2xl">
-            <span className="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
-            <span className="text-red-500 font-bold tracking-wider">AZMEERA THARUN</span>
-            <span className="text-white/40">|</span>
-            <span className="text-white/80">Full stack developer & AI Engineer</span>
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded bg-brown-950/80 backdrop-blur-2xl border border-brown-600/40 text-xs font-mono uppercase tracking-widest text-cream shadow-2xl">
+            <span className="w-2 h-2 rounded-full bg-brown-600 animate-ping"></span>
+            <span className="text-brown-500 font-bold tracking-wider">{siteData.name}</span>
+            <span className="text-cream/40">|</span>
+            <span className="text-cream/80">Full-Stack Developer & AI Engineer</span>
           </div>
-          <div className="hidden md:flex items-center gap-2 text-xs font-mono text-white/50 tracking-wider">
-            <span className="px-2 py-0.5 border border-white/20 rounded bg-black/40">FULL-STACK 4K</span>
-            <span className="px-2 py-0.5 border border-white/20 rounded bg-black/40">AI / ML CERTIFIED</span>
+          <div className="hidden md:flex items-center gap-2 text-xs font-mono text-cream/50 tracking-wider">
+            <span className="px-2 py-0.5 border border-cream/20 rounded bg-brown-950/40">FULL-STACK 4K</span>
+            <span className="px-2 py-0.5 border border-cream/20 rounded bg-brown-950/40">AI / ML CERTIFIED</span>
           </div>
         </div>
 
@@ -194,34 +195,34 @@ const Hero = () => {
           <div className="lg:col-span-5 flex flex-col items-start space-y-5 text-left">
             
             <div className="hero-anim-item flex items-center gap-3">
-              <span className="px-2.5 py-0.5 bg-red-600 text-white font-black text-xs rounded tracking-widest shadow-[0_0_20px_rgba(229,9,20,0.8)] animate-pulse">TOP 1%</span>
-              <span className="text-white/80 text-xs font-mono tracking-widest uppercase">Software Engineer & Problem Solver</span>
+              <span className="px-2.5 py-0.5 bg-brown-600 text-cream font-black text-xs rounded tracking-widest shadow-[0_0_20px_rgba(166,122,88,0.8)] animate-pulse">TOP 1%</span>
+              <span className="text-cream/80 text-xs font-mono tracking-widest uppercase">Full-Stack Developer & AI Engineer</span>
             </div>
 
-            <h1 className="hero-anim-item text-5xl md:text-7xl font-black tracking-tighter text-white leading-[0.95] drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)]">
-              AZMEERA <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-600 to-red-700 drop-shadow-[0_0_35px_rgba(220,38,38,0.5)]">
-                THARUN
+            <h1 className="hero-anim-item text-3xl sm:text-5xl md:text-6xl font-black tracking-tighter text-cream leading-[0.95] drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)]">
+              Anupindi N V S S <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brown-300 via-brown-500 to-brown-700 drop-shadow-[0_0_35px_rgba(166,122,88,0.5)]">
+                Surya Pavan
               </span>
             </h1>
 
-            <div className="hero-anim-item flex items-center gap-3 text-xs font-mono text-red-400 font-bold">
-              <span className="px-2 py-0.5 bg-red-500/10 border border-red-500/30 rounded text-red-500">99.9% Uptime</span>
-              <span className="text-white/40">•</span>
-              <span>React • Node.js • PostgreSQL</span>
-              <span className="text-white/40">•</span>
-              <span className="text-white/70">Docker & Cloud</span>
+            <div className="hero-anim-item flex items-center gap-3 text-xs font-mono text-brown-400 font-bold">
+              <span className="px-2 py-0.5 bg-brown-500/10 border border-brown-500/30 rounded text-brown-500">99.9% Uptime</span>
+              <span className="text-cream/40">•</span>
+              <span>React • Node.js • MySQL</span>
+              <span className="text-cream/40">•</span>
+              <span className="text-cream/70">Docker & Cloud</span>
             </div>
 
-            <p className="hero-anim-item text-sm md:text-base text-white/80 font-light leading-relaxed max-w-md drop-shadow">
-              Architecting robust full-stack systems, building scalable multi-tenant SaaS platforms, and engineering cutting-edge AI integrations.
+            <p className="hero-anim-item text-sm md:text-base text-cream/80 font-light leading-relaxed max-w-md drop-shadow">
+              I build scalable full-stack applications and integrate AI/ML solutions to address complex, real-world challenges.
             </p>
 
             {/* Action Button Set */}
             <div className="hero-anim-item flex items-center gap-4 pt-2">
               <a
                 href="#projects"
-                className="px-8 py-3.5 bg-white text-black font-bold text-xs uppercase tracking-widest rounded hover:bg-red-600 hover:text-white transition-all duration-300 shadow-[0_10px_35px_rgba(255,255,255,0.3)] flex items-center gap-2 hover:scale-105 active:scale-95"
+                className="px-8 py-3.5 bg-cream text-brown-950 font-bold text-xs uppercase tracking-widest rounded hover:bg-brown-600 hover:text-cream transition-all duration-300 shadow-[0_10px_35px_rgba(243,238,220,0.3)] flex items-center gap-2 hover:scale-105 active:scale-95"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
@@ -230,7 +231,7 @@ const Hero = () => {
               </a>
               <a
                 href="#contact"
-                className="px-8 py-3.5 bg-neutral-900/80 text-white border border-white/20 font-bold text-xs uppercase tracking-widest rounded hover:bg-neutral-800 transition-all duration-300 shadow-xl backdrop-blur-md flex items-center gap-2 hover:scale-105 active:scale-95"
+                className="px-8 py-3.5 bg-[#493023]/90 text-cream border border-cream/20 font-bold text-xs uppercase tracking-widest rounded hover:bg-[#62402E] transition-all duration-300 shadow-xl backdrop-blur-md flex items-center gap-2 hover:scale-105 active:scale-95"
               >
                 <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
                   <circle cx="12" cy="12" r="10" />
@@ -249,26 +250,26 @@ const Hero = () => {
               className="relative group transform-gpu transition-transform duration-100 ease-out will-change-transform"
             >
               {/* Cinematic Red Neon Back Glow */}
-              <div className="absolute -inset-3 bg-gradient-to-r from-red-600/70 via-rose-600/40 to-purple-600/20 rounded-3xl blur-3xl opacity-90 group-hover:opacity-100 animate-pulse duration-1000"></div>
+              <div className="absolute -inset-3 bg-gradient-to-r from-brown-600/70 via-brown-600/40 to-purple-600/20 rounded-3xl blur-3xl opacity-90 group-hover:opacity-100 animate-pulse duration-1000"></div>
               
               {/* Poster Card with Glossy Sheen */}
-              <div className="relative w-[280px] md:w-[320px] p-3.5 bg-[#141414]/90 backdrop-blur-2xl rounded-2xl border border-red-600/40 shadow-[0_40px_80px_rgba(0,0,0,0.95)] overflow-hidden">
+              <div className="relative w-[280px] md:w-[320px] p-3.5 bg-[#493023]/95 backdrop-blur-2xl rounded-2xl border border-brown-600/40 shadow-[0_40px_80px_rgba(0,0,0,0.35)] overflow-hidden">
                 
                 {/* Dynamic Specular Glare Layer */}
                 <div 
                   ref={glareRef}
-                  className="absolute inset-[-50%] w-[200%] h-[200%] bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none transform-gpu z-40"
+                  className="absolute inset-[-50%] w-[200%] h-[200%] bg-gradient-to-tr from-transparent via-cream/10 to-transparent pointer-events-none transform-gpu z-40"
                 ></div>
 
                 {/* Netflix Series Tag */}
-                <div className="absolute top-6 left-6 z-30 px-3 py-1 bg-red-600 text-white font-mono text-[10px] font-bold tracking-widest rounded shadow-xl">
-                  FEATURED DEV
+                <div className="absolute top-6 left-6 z-30 px-3 py-1 bg-brown-600 text-cream font-mono text-[10px] font-bold tracking-widest rounded shadow-xl">
+                  AI ENGINEER
                 </div>
 
                 <img
                   src={pictureImg}
                   alt="Developer Portrait"
-                  className="w-full h-[330px] md:h-[390px] object-cover rounded-xl filter contrast-125 brightness-105 group-hover:scale-[1.02] transition-transform duration-500"
+                  className="w-full h-[330px] md:h-[390px] object-contain rounded-xl filter contrast-125 brightness-105 group-hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
             </div>
@@ -276,10 +277,10 @@ const Hero = () => {
 
           {/* Right Side: Technical Specs & Stack */}
           <div className="hero-anim-item lg:col-span-3 flex flex-col items-start lg:items-end space-y-4 text-left lg:text-right">
-            <div className="p-5 bg-black/80 backdrop-blur-2xl border border-white/15 rounded-xl shadow-2xl max-w-xs">
-              <h3 className="text-xs font-mono uppercase tracking-widest text-red-500 font-bold mb-2">Core Stack & Awards</h3>
-              <p className="text-xs text-white/80 leading-relaxed font-light">
-                zero code IIT bomabay Semi-Finalist, Algovegha Tech Fellow, GitHub Foundations Certified.
+            <div className="p-5 bg-brown-950/80 backdrop-blur-2xl border border-cream/15 rounded-xl shadow-2xl max-w-xs">
+              <h3 className="text-xs font-mono uppercase tracking-widest text-brown-500 font-bold mb-2">Core Stack & Awards</h3>
+              <p className="text-xs text-cream/80 leading-relaxed font-light">
+                Member of the Coding Studio Club.
               </p>
             </div>
           </div>
@@ -287,7 +288,7 @@ const Hero = () => {
         </div>
 
         {/* Bottom Cinematic Ticker */}
-        <div className="hero-anim-item flex items-center justify-between text-xs font-mono text-white/50 tracking-widest uppercase">
+        <div className="hero-anim-item flex items-center justify-between text-xs font-mono text-cream/50 tracking-widest uppercase">
           <span>ENGINEERED FOR SCALABILITY</span>
           <span>[ PORTFOLIO RELEASE v2.6 ]</span>
         </div>
@@ -296,30 +297,32 @@ const Hero = () => {
       {/* 4. Ultra Pro Max Custom Precision Cursor Suite */}
       <div
         ref={cursorDotRef}
-        className="absolute top-0 left-0 z-50 pointer-events-none w-3 h-3 bg-red-600 rounded-full shadow-[0_0_15px_#E50914]"
+        className="absolute top-0 left-0 z-50 pointer-events-none w-3 h-3 bg-brown-600 rounded-full shadow-[0_0_15px_#A67A58]"
       ></div>
 
       <div
         ref={cursorRingRef}
-        className="absolute top-0 left-0 z-50 pointer-events-none w-12 h-12 border border-red-600/60 rounded-full flex items-center justify-center backdrop-blur-[1px]"
+        className="absolute top-0 left-0 z-50 pointer-events-none w-12 h-12 border border-brown-600/60 rounded-full flex items-center justify-center backdrop-blur-[1px]"
       ></div>
 
       {/* --- NETFLIX-THEMED DEVELOPER NAVBAR --- */}
       <header className="absolute top-0 left-0 z-50 w-full max-w-7xl mx-auto px-6 md:px-12 py-6 flex items-center justify-between pointer-events-auto">
-        <div className="text-2xl font-black text-red-600 tracking-tighter flex items-center gap-2 drop-shadow-[0_2px_15px_rgba(229,9,20,0.9)]">
-          AZMEERA THARUN<span className="w-1.5 h-1.5 rounded-full bg-white inline-block"></span>
+        <div className="text-base sm:text-xl lg:text-2xl font-black text-brown-600 tracking-tighter flex items-center gap-2 drop-shadow-[0_2px_15px_rgba(166,122,88,0.9)]">
+          <span className="sm:hidden">{siteData.name.split(' ')[0]}</span>
+          <span className="hidden sm:inline">{siteData.name}</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-cream inline-block"></span>
         </div>
-        <nav className="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-white/80">
-          <a href="#home" className="hover:text-red-500 transition-colors">Home</a>
-          <a href="#about" className="hover:text-red-500 transition-colors">About</a>
-          <a href="#expertise" className="hover:text-red-500 transition-colors">Expertise</a>
-          <a href="#skills" className="hover:text-red-500 transition-colors">Skills</a>
-          <a href="#projects" className="hover:text-red-500 transition-colors">Projects</a>
-          <a href="#contact" className="hover:text-red-500 transition-colors">Contact</a>
+        <nav className="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-cream/80">
+          <a href="#home" className="hover:text-brown-500 transition-colors">Home</a>
+          <a href="#about" className="hover:text-brown-500 transition-colors">About</a>
+          <a href="#expertise" className="hover:text-brown-500 transition-colors">Expertise</a>
+          <a href="#skills" className="hover:text-brown-500 transition-colors">Skills</a>
+          <a href="#projects" className="hover:text-brown-500 transition-colors">Projects</a>
+          <a href="#contact" className="hover:text-brown-500 transition-colors">Contact</a>
         </nav>
         <a
-          href="mailto:azmeeratharunaik@gmail.com"
-          className="px-5 py-2 rounded bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-[0_0_20px_rgba(229,9,20,0.6)] hover:scale-105 active:scale-95"
+          href={`mailto:${siteData.email}`}
+          className="px-5 py-2 rounded bg-brown-600 hover:bg-brown-700 text-cream font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-[0_0_20px_rgba(166,122,88,0.6)] hover:scale-105 active:scale-95"
         >
           Hire Me
         </a>

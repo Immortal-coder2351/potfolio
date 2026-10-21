@@ -1,12 +1,12 @@
-import pictureImg from '../assets/Portfolio/picture.png';
+import pictureImg from '../assets/Portfolio/profile-full.webp';
 
 export const siteData = {
-  name: 'AZMEERA THARUN',
-  title: 'AZMEERA THARUN | Portfolio',
+  name: 'Anupindi N V S S Surya Pavan',
+  title: 'Anupindi N V S S Surya Pavan | Portfolio',
   shortTitle: 'PORTFOLIO',
-  tagline: 'Full-Stack Developer • AI Engineer • Product Builder',
+  tagline: 'Full-Stack Developer • AI Engineer',
   location: 'HYDERABAD, India',
-  email: 'azmeeratharunaik@gmail.com',
+  email: 'suryapavan844@gmail.com',
   resumeUrl: '/resume.pdf',
   profileImage: pictureImg,
   heroRoles: [
@@ -16,9 +16,9 @@ export const siteData = {
     'ACCLAIMED // ALGORITHMIC PROBLEM SOLVER'
   ],
   socialLinks: [
-    { label: 'GitHub', url: 'https://github.com/azmeeratharun' },
-    { label: 'LinkedIn', url: 'https://linkedin.com/in/yourusername' },
-    { label: 'LeetCode', url: 'https://leetcode.com/yourusername' }
+    { label: 'GitHub', url: 'https://github.com/Immortal-coder2351' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/surya-pavan-39560136b' },
+    { label: 'LeetCode', url: 'https://leetcode.com/' }
   ],
   about: {
     episode: 'EPISODE 01',
@@ -36,7 +36,7 @@ export const siteData = {
       title: 'Backend & Databases',
       desc: 'Building secure REST APIs, authentication flows, server-side applications, and high-performance database architectures.',
       tag: 'ARCHITECTURE',
-      skills: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'REST APIs']
+      skills: ['Node.js', 'Express', 'MySQL', 'MongoDB', 'REST APIs']
     },
     {
       title: 'AI & Machine Learning',
@@ -45,10 +45,10 @@ export const siteData = {
       skills: ['NLP', 'Generative AI', 'Computer Vision', 'LLMs', 'Python']
     },
     {
-      title: 'Cloud & DevOps',
-      desc: 'Deploying and scaling production-grade applications with Docker, CI/CD pipelines, and cloud-hosted infrastructure.',
-      tag: 'INFRASTRUCTURE',
-      skills: ['Docker', 'GitHub', 'CI/CD Pipelines', 'AWS', 'Deployment']
+      title: 'Cloud & Deployment',
+      desc: 'Deploying applications with Docker, CI/CD pipelines, cloud-hosted infrastructure, and production deployment tools.',
+      tag: 'CLOUD & DEPLOYMENT',
+      skills: ['Docker', 'GitHub Actions', 'CI/CD', 'AWS', 'Deployment']
     },
     {
       title: 'Algorithmic Problem Solving',
@@ -76,7 +76,7 @@ export const siteData = {
       title: 'Operations Dashboard',
       category: 'Data & Workflow Systems',
       description: 'A real-time admin dashboard for monitoring KPIs, processing data streams, and simplifying operations.',
-      tags: ['React', 'PostgreSQL', 'REST APIs', 'Charting'],
+      tags: ['React', 'MySQL', 'REST APIs', 'Charting'],
       match: '98%',
       episode: 'S01 E02'
     },
@@ -84,7 +84,7 @@ export const siteData = {
       title: 'Payment Gateway System',
       category: 'Fintech Architecture',
       description: 'A transaction platform supporting secure payment flows, validation rules, and webhook-based processing.',
-      tags: ['JavaScript', 'PostgreSQL', 'REST APIs', 'Docker'],
+      tags: ['JavaScript', 'MySQL', 'REST APIs', 'Docker'],
       match: '97%',
       episode: 'S01 E03'
     },
